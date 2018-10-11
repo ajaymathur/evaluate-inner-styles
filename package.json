@@ -1,0 +1,22 @@
+{
+  "name": "evaluate-inner-styles",
+  "version": "1.0.0",
+  "main": "dist.js",
+  "author": "Ajay Narain Mathur <ajaynarainmathur@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel index.js --out-file dist.js"
+  },
+  "files": [
+    "dist.js"
+  ],
+  "dependencies": {
+    "fbjs": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-flow": "^7.0.0"
+  }
+}
