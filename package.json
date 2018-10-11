@@ -5,7 +5,8 @@
   "author": "Ajay Narain Mathur <ajaynarainmathur@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel index.js --out-file dist.js"
+    "build": "babel index.js --out-file dist.js",
+    "test": "ava --verbose"
   },
   "files": [
     "dist.js"
@@ -17,6 +18,7 @@
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
-    "@babel/preset-flow": "^7.0.0"
+    "@babel/preset-flow": "^7.0.0",
+    "ava": "^0.25.0"
   }
 }
