@@ -10,11 +10,6 @@ Basic usage:
 
 ```js
 import evaluateInerStyles from 'evaluate-inner-styles';
-const styles = {
-    h1: {
-        height: 10px;
-    }
-}
 
 evaluateInerStyles()`
     h1: {
