@@ -17,8 +17,35 @@ evaluateInerStyles()`
     }
 `
 // returns =>
-// h1: {
+// 'h1: {
 //     height: 10px;
-// }
+// }'
+```
 
+Usage with themes:
+
+```js
+import evaluateInerStyles from 'evaluate-inner-styles';
+
+const headColor = ({ mode }) => mode === 'dark' ? "#303030" : "#000000";
+
+evaluateInnerStyles({ mode: 'dark' })`
+    .head { 
+        color: ${headColor} 
+    }
+`;
+// returns => 
+// .head {
+//      color: #303030
+//  }
+
+evaluateInnerStyles({ mode: 'light' })`
+    .head {
+        color: ${headColor}
+    }
+`;
+// returns => 
+// .head {
+//      color: #000000
+//  }
 ```
