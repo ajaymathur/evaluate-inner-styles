@@ -9,9 +9,9 @@ We can export evaluated css styles from an object.
 Basic usage:
 
 ```js
-import evaluateInerStyles from 'evaluate-inner-styles';
+import evaluateInnerStyles from 'evaluate-inner-styles';
 
-evaluateInerStyles()`
+evaluateInnerStyles()`
     h1: {
         height: 10px;
     }
@@ -25,7 +25,7 @@ evaluateInerStyles()`
 Usage with themes:
 
 ```js
-import evaluateInerStyles from 'evaluate-inner-styles';
+import evaluateInnerStyles from 'evaluate-inner-styles';
 
 const headColor = ({ mode }) => mode === 'dark' ? "#303030" : "#000000";
 
