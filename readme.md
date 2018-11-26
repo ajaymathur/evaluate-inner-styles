@@ -1,50 +1,54 @@
 # evaluate-inner-styles
 
-> Compile the css-in-js before-hand for styled-components
+> Generate static styles from JS at build time
 
-Inspired by -> https://github.com/styled-components/styled-components/blob/master/src/constructors/css.js
+Inspired by https://github.com/styled-components/styled-components/blob/master/src/constructors/css.js
 
-We can export evaluated css styles from an object.
+## Usage
 
-Basic usage:
+### Basic usage
 
 ```js
-import evaluateInnerStyles from 'evaluate-inner-styles';
+import evaluateInnerStyles from "evaluate-inner-styles";
+
+const h1Color = "#172B4D";
 
 evaluateInnerStyles()`
     h1: {
-        height: 10px;
+        color: ${h1Color};
     }
-`
+`;
 // returns =>
 // 'h1: {
-//     height: 10px;
+//     color: #172B4D;
 // }'
 ```
 
-Usage with themes:
+### Advance usage
+
+We can generate styles with support for theme.
 
 ```js
-import evaluateInnerStyles from 'evaluate-inner-styles';
+import evaluateInnerStyles from "evaluate-inner-styles";
 
-const headColor = ({ mode }) => mode === 'dark' ? "#303030" : "#000000";
+const headColor = ({ mode }) => (mode === "dark" ? "#303030" : "#000000");
 
-evaluateInnerStyles({ mode: 'dark' })`
+evaluateInnerStyles({ mode: "dark" })`
     .head { 
         color: ${headColor} 
     }
 `;
-// returns => 
+// returns =>
 // .head {
 //      color: #303030
 //  }
 
-evaluateInnerStyles({ mode: 'light' })`
+evaluateInnerStyles({ mode: "light" })`
     .head {
         color: ${headColor}
     }
 `;
-// returns => 
+// returns =>
 // .head {
 //      color: #000000
 //  }
